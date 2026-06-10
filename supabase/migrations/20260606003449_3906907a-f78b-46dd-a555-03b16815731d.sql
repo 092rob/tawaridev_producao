@@ -1,0 +1,2 @@
+ALTER TABLE public.glosa_motivos_records RENAME COLUMN justif_de_recurso TO justificativa_de_recurso;
+ALTER TABLE public.glosa_motivos_records RENAME COLUMN comentario_de_aceite TO comentario_aceite;

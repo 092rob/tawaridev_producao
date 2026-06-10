@@ -1,0 +1,1 @@
+ALTER TABLE public.api_glosa_item ADD CONSTRAINT api_glosa_item_cliente_entidade_unique UNIQUE (cliente_id, entidade_id);

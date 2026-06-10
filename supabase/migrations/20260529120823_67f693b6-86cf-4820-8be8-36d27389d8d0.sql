@@ -1,0 +1,1 @@
+ALTER TABLE public.agendas_positivas ADD COLUMN IF NOT EXISTS glosa_reason TEXT;

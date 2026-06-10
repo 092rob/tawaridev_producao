@@ -1,0 +1,1 @@
+REVOKE EXECUTE ON FUNCTION public.notify_glosa_users(text, text, text) FROM PUBLIC, anon, authenticated;

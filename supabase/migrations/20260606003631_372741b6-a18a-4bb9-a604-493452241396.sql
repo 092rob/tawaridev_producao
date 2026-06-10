@@ -1,0 +1,32 @@
+ALTER TABLE public.glosa_motivos_records ADD COLUMN IF NOT EXISTS num_atendimento TEXT;
+ALTER TABLE public.glosa_motivos_records ADD COLUMN IF NOT EXISTS data_recebimento DATE;
+ALTER TABLE public.glosa_motivos_records ADD COLUMN IF NOT EXISTS data_saida_guia DATE;
+ALTER TABLE public.glosa_motivos_records ADD COLUMN IF NOT EXISTS data_analise DATE;
+ALTER TABLE public.glosa_motivos_records ADD COLUMN IF NOT EXISTS guia_associada TEXT;
+ALTER TABLE public.glosa_motivos_records ADD COLUMN IF NOT EXISTS num_parcial_recurso NUMERIC;
+ALTER TABLE public.glosa_motivos_records ADD COLUMN IF NOT EXISTS codigo_item_convenio TEXT;
+ALTER TABLE public.glosa_motivos_records ADD COLUMN IF NOT EXISTS tipo_tabela TEXT;
+ALTER TABLE public.glosa_motivos_records ADD COLUMN IF NOT EXISTS data_realizacao DATE;
+ALTER TABLE public.glosa_motivos_records ADD COLUMN IF NOT EXISTS data_recurso DATE;
+ALTER TABLE public.glosa_motivos_records ADD COLUMN IF NOT EXISTS data_aceite DATE;
+ALTER TABLE public.glosa_motivos_records ADD COLUMN IF NOT EXISTS codigo_centro_custos TEXT;
+ALTER TABLE public.glosa_motivos_records ADD COLUMN IF NOT EXISTS grau_participacao NUMERIC;
+ALTER TABLE public.glosa_motivos_records ADD COLUMN IF NOT EXISTS qtde_faturada NUMERIC;
+ALTER TABLE public.glosa_motivos_records ADD COLUMN IF NOT EXISTS vlr_unit_faturado NUMERIC;
+ALTER TABLE public.glosa_motivos_records ADD COLUMN IF NOT EXISTS qtde_paga NUMERIC;
+ALTER TABLE public.glosa_motivos_records ADD COLUMN IF NOT EXISTS vlr_unit_conv NUMERIC;
+ALTER TABLE public.glosa_motivos_records ADD COLUMN IF NOT EXISTS codigo_motivo_glosa_tiss TEXT;
+ALTER TABLE public.glosa_motivos_records ADD COLUMN IF NOT EXISTS descricao_motivo_glosa_tiss TEXT;
+ALTER TABLE public.glosa_motivos_records ADD COLUMN IF NOT EXISTS justificativa_recurso TEXT;
+ALTER TABLE public.glosa_motivos_records ADD COLUMN IF NOT EXISTS data_envio_recurso_lote DATE;
+ALTER TABLE public.glosa_motivos_records ADD COLUMN IF NOT EXISTS protocolo_recurso_lote TEXT;
+ALTER TABLE public.glosa_motivos_records ADD COLUMN IF NOT EXISTS justificativa_aceite TEXT;
+ALTER TABLE public.glosa_motivos_records ADD COLUMN IF NOT EXISTS data_envio_recurso_item DATE;
+ALTER TABLE public.glosa_motivos_records ADD COLUMN IF NOT EXISTS protocolo_envio_recurso_item TEXT;
+ALTER TABLE public.glosa_motivos_records ADD COLUMN IF NOT EXISTS num_proc_complementar TEXT;
+ALTER TABLE public.glosa_motivos_records ADD COLUMN IF NOT EXISTS usuario_envio_recurso_item TEXT;
+
+-- Renaming for consistency with the new JSON structure
+ALTER TABLE public.glosa_motivos_records RENAME COLUMN comentario_aceite TO comentario_de_aceite;
+ALTER TABLE public.glosa_motivos_records RENAME COLUMN usuario_recurso TO usuario_realizou_recurso;
+ALTER TABLE public.glosa_motivos_records RENAME COLUMN usuario_aceite TO usuario_realizou_aceite;

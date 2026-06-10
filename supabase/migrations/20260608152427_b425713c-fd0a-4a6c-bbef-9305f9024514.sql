@@ -1,0 +1,2 @@
+CREATE INDEX IF NOT EXISTS idx_glosa_motivos_data_pagamento ON public.glosa_motivos_records (data_pagamento);
+CREATE INDEX IF NOT EXISTS idx_glosa_motivos_filtros_composto ON public.glosa_motivos_records (data_pagamento, convenio_nome, descricao_tipo_glosa);

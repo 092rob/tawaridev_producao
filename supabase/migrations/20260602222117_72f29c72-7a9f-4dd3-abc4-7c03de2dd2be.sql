@@ -1,0 +1,1 @@
+TRUNCATE TABLE public.api_glosa_item RESTART IDENTITY;

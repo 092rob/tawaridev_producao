@@ -1,0 +1,1 @@
+ALTER TABLE public.glosa_records ADD COLUMN IF NOT EXISTS tipo_importacao text;

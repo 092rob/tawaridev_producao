@@ -1,0 +1,1 @@
+ALTER TABLE public.agendas_positivas ADD COLUMN account_number TEXT;
